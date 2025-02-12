@@ -15,6 +15,7 @@
             --border-color: rgba(255, 255, 255, 0.8);
             --popup-bg: rgba(76, 175, 80, 0.9);
             --shadow-color: rgba(0, 247, 255, 0.2);
+            --roadmap-item-bg: rgba(255, 255, 255, 0.1);
         }
 
         :root[data-theme="light"] {
@@ -26,6 +27,7 @@
             --border-color: rgba(0, 0, 0, 0.3);
             --popup-bg: rgba(76, 175, 80, 0.9);
             --shadow-color: rgba(0, 102, 204, 0.2);
+            --roadmap-item-bg: rgba(0, 0, 0, 0.05);
         }
 
         * {
@@ -437,13 +439,14 @@
         .roadmap-item {
             position: relative;
             padding: 2rem;
-            background: var(--card-bg);
+            background: var(--roadmap-item-bg);
             border-radius: 15px;
             margin: 2rem auto;
             backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
             max-width: 600px;
+            color: var(--text-color);
         }
 
         .roadmap-item:hover {
@@ -469,6 +472,13 @@
             color: var(--accent-color);
             font-size: 1.2rem;
             line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            .roadmap-item {
+                background: var(--roadmap-item-bg);
+                backdrop-filter: none;
+            }
         }
     </style>
 </head>
