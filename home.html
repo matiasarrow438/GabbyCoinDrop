@@ -253,7 +253,6 @@
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            will-change: opacity, transform;
         }
 
         .fade-in.visible {
@@ -319,6 +318,9 @@
 
         .section {
             margin: 6rem 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
             scroll-margin-top: 100px;
         }
 
@@ -467,25 +469,6 @@
             color: var(--accent-color);
             font-size: 1.2rem;
             line-height: 1;
-        }
-
-        /* Ensure content stays visible on mobile */
-        @media (max-width: 768px) {
-            .section {
-                margin: 3rem 0;
-            }
-            
-            .roadmap-item {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
-            }
-
-            .fade-in {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
-            }
         }
     </style>
 </head>
@@ -677,20 +660,19 @@
             threshold: 0.1
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Only animate once
                 }
             });
         }, observerOptions);
 
-        // Only apply observer on non-mobile devices
+        // Observe all fade-in elements
         document.addEventListener('DOMContentLoaded', () => {
-            if (window.innerWidth > 768) {
-                const sections = document.querySelectorAll('.section, .fade-in');
-                sections.forEach(section => observer.observe(section));
-            }
+            const fadeElements = document.querySelectorAll('.fade-in, .fade-in-cascade, .section');
+            fadeElements.forEach(element => observer.observe(element));
         });
 
         // Theme toggle functionality
