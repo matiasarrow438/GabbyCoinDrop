@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memecoin Name</title>
+    <title>Netflix And Chill</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root[data-theme="dark"] {
-            --bg-gradient: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            --bg-gradient: linear-gradient(45deg, #ff1b6b, #45caff);
             --text-color: white;
-            --accent-color: #00f7ff;
+            --accent-color: #ff69b4;
             --card-bg: rgba(255, 255, 255, 0.1);
             --button-bg: rgba(255, 255, 255, 0.1);
             --border-color: rgba(255, 255, 255, 0.8);
-            --popup-bg: rgba(76, 175, 80, 0.9);
-            --shadow-color: rgba(0, 247, 255, 0.2);
+            --popup-bg: rgba(255, 107, 181, 0.9);
+            --shadow-color: rgba(255, 105, 180, 0.3);
             --roadmap-item-bg: rgba(255, 255, 255, 0.1);
         }
 
         :root[data-theme="light"] {
-            --bg-gradient: linear-gradient(45deg, #ffffff, #f0f2f5, #e6e9ef);
-            --text-color: #1a1a1a;
-            --accent-color: #0066cc;
-            --card-bg: rgba(0, 0, 0, 0.05);
-            --button-bg: rgba(0, 0, 0, 0.05);
-            --border-color: rgba(0, 0, 0, 0.3);
-            --popup-bg: rgba(76, 175, 80, 0.9);
-            --shadow-color: rgba(0, 102, 204, 0.2);
-            --roadmap-item-bg: rgba(0, 0, 0, 0.05);
+            --bg-gradient: linear-gradient(45deg, #ffd1dc, #ffffff);
+            --text-color: #ff1b6b;
+            --accent-color: #ff1b6b;
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --button-bg: rgba(255, 27, 107, 0.1);
+            --border-color: rgba(255, 27, 107, 0.3);
+            --popup-bg: rgba(255, 107, 181, 0.9);
+            --shadow-color: rgba(255, 27, 107, 0.2);
+            --roadmap-item-bg: rgba(255, 255, 255, 0.7);
         }
 
         * {
@@ -127,15 +127,20 @@
         }
 
         .logo-placeholder {
-            width: 250px;
-            height: 250px;
-            background: rgba(255, 255, 255, 0.1);
-            margin: 0 auto 2rem;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin: 2rem auto;
+            overflow: hidden;
             box-shadow: 0 0 30px var(--shadow-color);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .main-content {
@@ -560,22 +565,28 @@
         }
 
         .loading-text {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--accent-color);
             text-align: center;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             animation: pulseText 2s infinite;
+            text-shadow: 0 0 10px var(--accent-color);
         }
 
         @keyframes pulseText {
             0% {
                 opacity: 0.5;
+                transform: scale(0.95);
             }
             50% {
                 opacity: 1;
+                transform: scale(1.05);
             }
             100% {
                 opacity: 0.5;
+                transform: scale(0.95);
             }
         }
 
@@ -613,17 +624,19 @@
                 <a href="#how-to-buy" class="nav-button">How To Buy</a>
             </div>
             <div class="social-links">
-                <a href="https://discord.gg/vU3pFgJS" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://discord.gg/VppP72nB" target="_blank"><i class="fab fa-discord"></i></a>
                 <a href="https://www.tiktok.com/@gabbymifsud" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://x.com/netflixco1n/status/1890283200175624647?s=46" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
             </div>
         </nav>
 
         <div class="hero fade-in-cascade">
             <div class="logo-placeholder">
-                [Logo Here]
+                <img src="images/profile.jpg" alt="Netflix Coin Logo">
             </div>
-            <h1>[Coin Name]</h1>
+            <h1>$NCHILL</h1>
             <p>The Meme Vault Coin Drop</p>
         </div>
 
@@ -705,7 +718,7 @@
                             PUMPFUN
                             <img src="images/PUMPFUN.png" alt="PUMPFUN" class="pumpfun-logo">
                         </div>
-                        <p>Ticker: [TBA]</p>
+                        <p>Ticker: $NCHILL</p>
                     </div>
 
                     <div class="tokenomics-item">
@@ -756,7 +769,9 @@
             <div class="social-links" style="justify-content: center; margin-top: 1rem;">
                 <a href="https://discord.gg/vU3pFgJS" target="_blank"><i class="fab fa-discord"></i></a>
                 <a href="https://www.tiktok.com/@gabbymifsud" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://x.com/netflixco1n/status/1890283200175624647?s=46" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -767,7 +782,7 @@
 
     <div class="loading-overlay">
         <div class="loading-spinner"></div>
-        <div class="loading-text">MemeVault Coin Drop</div>
+        <div class="loading-text">Netflix And Chill Token</div>
     </div>
 
     <script>
